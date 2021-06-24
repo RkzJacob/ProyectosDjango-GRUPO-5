@@ -1,0 +1,186 @@
+{% load static %}
+{%load bootstrap4%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminos y condiciones </title>
+    <link rel="stylesheet"  href="{% static 'sistemaWeb/css/bootstrap.css' %}">
+    <link rel="shortcut icon" href="{% static 'sistemaWeb/img/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'sistemaWeb/css/myStyle.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+<header class="Header">
+        <div class="headerParte1">
+          <div class="container-fluid">
+              <!-- primera fila -->
+              <div class="row">
+                  <!-- columna 1 -->
+                  <div class="col-md-6">
+                      <!-- logo de la pagina -->
+                      <a href="{% url 'index'%}"><img src="{% static 'sistemaWeb/img/logo.png' %}" width="70" height="60" alt="GroupZero"></a>
+                  </div>
+                  <!-- segunda columna col two-->
+                  <div class="col">
+                      <!-- botones para registrarte y loguearte< p1 >-->
+                      <ul class="nav nav-pills justify-content-end">
+                          <li class="nav-item">
+                            <a class="nav-link  badge badge-secondary" href="{% url 'login'%}">Login</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link badge badge-primary text-dark" href="{% url 'register'%}">Register</a>
+                          </li> 
+                        </ul> 
+                      <!--        p1        -->
+                  </div>
+                  <!-- col two -->
+              </div>
+          </div>
+        </div>
+      
+        <div class="headerParte2">
+          <!-- segunda fila -->
+          <div class="container-fluid"> 
+              <div class="row">
+                  <div class="col pl-0 pr-0">
+                      <!-- lista con el navegador -->
+                      <ul class="nav justify-content-end float-right">
+                        <!-- primer item  de la lista -->
+                        <li class="nav-item">
+                          <a class="nav-link active text-dark" href="{% url 'index'%}">Inicio</a>
+                        </li>
+                        <!-- lista desplegable de una categoria -->
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">bla</a>
+                            <a class="dropdown-item" href="#">bla1</a>
+                            <a class="dropdown-item" href="#">bla2</a>
+                            <a class="dropdown-item" href="#">bla3</a>
+                          </div>
+                        </li>
+      
+                        <!-- tercero item de la lista -->
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="{% url 'pinturas'%}">Pinturas</a>
+                        </li>
+                        <!-- cuarto item de la lista -->
+                        <li class="nav-item">
+                          <a class="nav-link text-dark " href="{% url 'artistas'%}" >Artistas</a>
+                        </li>
+                        <!-- busqueda de archivos por medio de una palabra clave -->
+                        <li class="navbar navbar-light " style="background-color: red;">
+                          <form class="form-inline ">
+                            <input class="form-control mr-sm-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
+                            <button class="btn btn-outline-warning my-2 my-sm-0 text-dark btn-warning" type="submit">Buscar</button>
+                          </form>
+                        </li>
+                        </nav>
+                      </ul>
+                      </div>        
+                </div>
+              </div>
+            </div>
+</header>    
+
+<section>
+    <div class="container content-center">
+        <div class="row">
+            <div class="col-12">
+                <p class="text-align-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias impedit, saepe recusandae asperiores odio, eaque ut fugiat perspiciatis fugit rem velit beatae reiciendis vero totam cupiditate iure commodi atque nemo!
+                Praesentium temporibus doloribus dolores atque at eveniet? Autem similique doloremque ipsum iusto excepturi voluptates quam dolorum? In dolore dicta odio veritatis asperiores quidem, repellendus deleniti ex iure, eligendi obcaecati excepturi.
+                Obcaecati atque eaque odit commodi impedit molestias natus dolorum officia facilis non? Quam culpa ab earum velit accusamus, quisquam, obcaecati, esse mollitia voluptatibus possimus iusto. Porro maiores quo optio totam.
+                Dolores quam et reprehenderit similique deleniti, harum ea! Nihil, nam laudantium est voluptas facilis consectetur qui doloribus obcaecati laboriosam, iusto asperiores veniam mollitia in quam fugiat explicabo neque, accusamus fuga.
+                Veritatis libero, atque, aspernatur exercitationem hic numquam, quasi molestias perferendis repudiandae quas natus corporis placeat dignissimos possimus. Porro quo exercitationem consequuntur hic necessitatibus mollitia, voluptates officiis perspiciatis deleniti, commodi ea?
+                Laudantium assumenda dolorem excepturi dolorum eos possimus facilis omnis sunt, itaque quam sequi ut accusamus aliquam ullam, est perferendis debitis. Nobis provident possimus quisquam quos fugit voluptatum itaque, corporis cumque!
+                Veritatis sint mollitia officiis, est dolorem ad nemo eum minus deserunt ipsum perspiciatis suscipit a optio, animi vitae beatae placeat ex cum temporibus iure adipisci sed nesciunt deleniti voluptas. Dignissimos.
+                Adipisci quae doloremque exercitationem labore, esse consectetur quis vero quod ea corrupti quibusdam deserunt minus maxime nulla enim blanditiis voluptatum placeat assumenda, facilis explicabo accusamus. Sint quos beatae accusantium reprehenderit.
+                Dolorum exercitationem obcaecati perferendis suscipit aliquam deserunt, sunt quod recusandae fuga, minima dicta rerum impedit nostrum quasi quo qui minus expedita, eaque aperiam similique eius esse. Praesentium sapiente provident quos.
+                Necessitatibus deleniti explicabo nisi ex illum. Blanditiis dolorem ullam provident, quod nihil distinctio tenetur. Est quaerat, temporibus quo ratione cupiditate beatae, provident consequatur nisi necessitatibus exercitationem nostrum reiciendis mollitia qui.
+                Et, corrupti! Maiores fuga ipsa dolore reiciendis debitis voluptatum nemo dicta, dolorem odio nesciunt omnis magni earum vero distinctio libero mollitia esse beatae non vitae labore ipsum quae cumque minima.
+                Error recusandae libero distinctio voluptatibus aliquam placeat blanditiis nam nulla odit quod voluptate autem ducimus facere laboriosam tenetur reiciendis neque impedit maxime natus, sequi dignissimos amet nihil. Ipsa, quod inventore.
+                Fugit, nulla nam est, expedita, beatae asperiores aliquid voluptatibus ab maxime ipsa dignissimos quis! Ab porro itaque nihil odio, minima eius quod aut ipsum provident maxime sed sint impedit praesentium?
+                Voluptatem in repellat ducimus ab culpa! Minus totam eos nihil officia. Doloribus cupiditate rerum ipsa! Perspiciatis excepturi adipisci beatae, blanditiis, ut, explicabo itaque ipsum veritatis sequi eveniet ipsam corrupti neque.
+                Sit quas reiciendis, deleniti ipsam aliquam, tempore temporibus iusto neque, blanditiis doloribus natus sapiente a at? Suscipit est dolor, quos laboriosam perferendis, aperiam voluptate enim earum dolores, nam unde optio!
+                Debitis quia similique expedita soluta animi officiis eveniet minus earum molestias. Suscipit eveniet corporis porro qui harum culpa velit voluptates. Unde at voluptas molestiae, iure reprehenderit quod nesciunt eligendi laudantium.
+                Fugiat nemo rerum earum ullam magnam magni doloribus alias? Voluptatum reprehenderit harum unde molestias fugiat quisquam sequi assumenda nisi voluptates ullam. Quod quos officiis dicta cum quasi dolores magnam ratione!
+                Temporibus, harum perferendis, explicabo rem vel odio consectetur debitis soluta neque velit ut nobis cumque! Labore dolor ex sapiente sequi porro voluptas, debitis quidem repellat eaque officiis facilis sit quibusdam.
+                Atque a molestias repudiandae quam nemo ut, eveniet similique laudantium, voluptates veritatis reprehenderit quis optio obcaecati maiores vero omnis eos beatae, minus excepturi quos voluptate recusandae accusamus! Quisquam, dignissimos inventore?
+                Vel repudiandae assumenda, adipisci accusamus nesciunt quo. Molestias, alias rem. Exercitationem voluptate, delectus, officiis adipisci molestias iusto, aliquam quia velit iure quos autem blanditiis et dolorum praesentium dolor impedit quasi!
+                Repudiandae, praesentium est. Corporis, maxime placeat? Facilis, minus ipsa! Temporibus dolorum nisi perferendis est quae maiores vitae reiciendis, nulla eius voluptatibus quia beatae repellat blanditiis exercitationem necessitatibus ex! Neque, fuga!
+                Quos labore, iusto vitae eveniet natus asperiores recusandae ex dolores voluptatum velit aut quasi vel laudantium corrupti atque explicabo sunt esse cum minima ad magni quis cupiditate. Nam, atque quia.
+                Vel, natus? Cumque ullam molestias distinctio, eligendi dignissimos, quam at veniam saepe voluptates dolore adipisci suscipit modi sint illo dicta, ut sequi? Explicabo impedit quis deleniti dolorem id quasi assumenda.
+                Ut quia odio ratione sequi eveniet perferendis, ea reprehenderit ex maxime error in doloremque deserunt neque illum? Doloremque deserunt fuga beatae aperiam vel modi quae autem excepturi. Odio, excepturi hic?
+                Consequatur sit cum, praesentium quae quibusdam eos aliquid fugit cumque doloremque minus, non facilis mollitia reprehenderit asperiores accusantium vero! Fugit doloribus impedit perferendis in eveniet aperiam ducimus sit eos alias!
+                Totam officiis, illo porro ad non asperiores eos dolor praesentium quos sunt accusamus temporibus excepturi ex minus laborum mollitia delectus a quisquam minima fuga. Tenetur perferendis eos ratione dolorum earum!
+                Quis molestias, nesciunt sunt velit numquam officia nobis harum sequi quia voluptates! Alias architecto sed odio animi? Natus temporibus blanditiis quas fuga voluptatem voluptatum numquam vitae fugiat, ex, nulla facilis?
+                Tempora exercitationem, optio in vero doloribus quaerat, pariatur ipsam animi, nesciunt magni dignissimos ipsum. Qui praesentium, fugiat enim ratione similique aliquid laborum reiciendis, quasi iusto aspernatur quae provident exercitationem velit?
+                Repudiandae error deleniti sunt nostrum magni distinctio quidem nobis reiciendis sapiente minima architecto alias expedita impedit, neque illo culpa dignissimos aliquam laborum et fugiat nihil voluptas atque. Odit, deleniti ea?
+                Tenetur tempora qui expedita sint velit ratione consectetur eligendi deserunt? Dolorum, esse? Tempore aspernatur cum obcaecati reiciendis vitae, ullam deserunt fugit dignissimos ea cupiditate officiis, modi minima dolores aliquid molestias.
+                Porro nemo officia dolore? Animi a repudiandae provident eaque, eveniet, illum magni cupiditate iusto facilis illo non id voluptatibus totam rem nesciunt corrupti distinctio est nostrum, earum sed quibusdam? Qui.
+                Fugit dolor animi cumque temporibus, illum veritatis sunt neque ratione, atque accusamus impedit quae rerum omnis nemo laboriosam consectetur fuga quas hic consequuntur ut blanditiis excepturi aliquam repellat minima! Impedit.
+                Odit, facere hic! Nobis quaerat voluptatum debitis quae dolorum eaque possimus corporis et vitae velit blanditiis eum facilis, magnam laudantium quis culpa optio! Veritatis, inventore! Tenetur odio repudiandae ab amet!
+                Voluptas architecto dolore quo sed ducimus, consequuntur, beatae in ipsum, velit fugit odio sit quas? Animi, voluptatibus voluptatem. Laudantium aut ratione quidem odit sunt officiis omnis nostrum tempora ea magnam?
+                Doloribus eveniet dolores reiciendis temporibus pariatur non suscipit reprehenderit, odit autem enim aut. Ipsum illum, quae commodi vel sint vitae minima accusamus adipisci explicabo labore repudiandae incidunt architecto saepe iure.
+                Iste magni repellendus tempore. In dicta labore similique animi id natus iste, a enim! Accusantium tenetur, culpa quas vitae ut, tempora quisquam esse ratione corrupti numquam dolorem impedit maxime quae?
+                Explicabo rem harum ea incidunt? Facilis placeat obcaecati beatae eveniet porro quae, nemo pariatur? Esse recusandae fugit quisquam dolorem minima dolores nisi, soluta facilis labore amet possimus sapiente temporibus eius?
+                Tenetur, atque voluptatem sed, officia odit quia rerum reprehenderit voluptate eos culpa sapiente, eaque nobis optio blanditiis ut iste ex deleniti voluptates vero quae laboriosam? A, in sequi! Modi, ratione?
+                Explicabo voluptates et, ipsa eius harum est error fugiat vel laborum voluptas mollitia suscipit odio fugit alias at perspiciatis facere quidem doloribus rem atque molestiae iste? Eveniet asperiores in dolorum.
+                Suscipit fuga ducimus quo ratione assumenda voluptate, qui, possimus dignissimos cupiditate quis, unde omnis placeat. Laboriosam, deleniti voluptatibus tempore doloribus quo vitae at mollitia voluptatum? Consectetur ex sit quidem perferendis.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="bg-dark text-white ">
+    <div class="container ">
+      <nav class="row">
+        <a href="{% url 'index'%}" class="col-3 text-reset text-uppercase d-flex align-items-center ">
+          <img src="{% static 'sistemaWeb/img/logo.png' %}" alt="Logo GroupZero" class="img-logo mr-2">
+        </a>
+        <ul class="col-3 list-unstyled">
+          <li class="font-weight-bold text-uppercase">Problemas</li>
+          <li><a href="{% url 'CondicionesServicio'%}" class="text-reset">Condiciones de Servicio</a></li>
+        </ul>
+        <ul class="col-3 list-unstyled">
+          <li class="font-weight-bold text-uppercase">Conoce Sobre Nosotros</li>
+          <li><a href="#" class="text-reset">Nuestra Meta</a></li>
+        </ul>
+        <ul class="col-3 list-unstyled">
+          <li class="font-weight-bold text-uppercase">Redes Sociales</li>
+          <li>
+            <a href="https://web.facebook.com/?_rdc=1&_rdr" class="text-reset">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" class="text-reset" >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/directory/following" class="text-reset">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="col-12 text-center h6">© All right Reversed.</p> 
+      </nav> 
+        </div>
+</footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="{% static 'sistemaWeb/js/jquery-3.6.0.js' %}"></script>
+    <script src="{% static 'sistemaWeb/js/popper.js' %}"></script>
+    <script src="{% static 'sistemaWeb/js/bootstrap.js' %}"></script>
+</body>
+</html>

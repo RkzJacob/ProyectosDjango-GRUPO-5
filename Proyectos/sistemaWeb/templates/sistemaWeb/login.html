@@ -1,0 +1,238 @@
+{% load static %}
+{%load bootstrap4%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {%bootstrap_css %}
+    <link rel="shortcut icon" href="{% static 'sistemaWeb/img/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'sistemaWeb/css/myStyle.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="{% static 'sistemaWeb/js/script.js' %}"></script>
+    <script src="{% static 'sistemaWeb/js/jquery-3.6.0.js' %}"></script>
+    <script src="{% static 'sistemaWeb/js/script.js' %}"></script>
+</head>
+
+<body>
+    <!-- Header -->
+<header>
+  <Section>
+    <div class="container-fluid  " style="background-color: indigo;">
+        <!-- primera fila -->
+        <div class="row">
+            <!-- columna 1 -->
+            <div class="col-md-6">
+                <!-- logo de la pagina -->
+                <a href="{% url 'index'%}"><img src="{% static 'sistemaWeb/img/logo.png' %}" width="70" height="60" alt="GroupZero"></a>
+            </div>
+            <!-- segunda columna col two-->
+            <div class="col">
+                <!-- botones para registrarte y loguearte< p1 >-->
+                <ul class="nav nav-pills justify-content-end">
+                    <li class="nav-item">
+                      <a class="nav-link  badge badge-secondary" href="{% url 'login'%}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link badge badge-primary text-dark" href="{% url 'register'%}">Register</a>
+                    </li> 
+                  </ul> 
+                <!--        p1        -->
+            </div>
+            <!-- col two -->
+        </div>
+    </div>
+  </section>
+</header>
+
+<!-- formulario -->
+<section>
+  <br>
+    <div class="container">
+        <div class="row badge-warning">
+            <div class="col badge-warning border border-secondary rounded">
+                <h1 class="text-center">Login</h1>
+                <form id="Form1">
+                    <div class="form-group">
+                      <label for="EscribirEmail">Email</label>
+                      <input type="email" class="form-control" id="EscribirEmail" aria-describedby="emailHelp">
+                      <small id="emailHelp" class="form-text text-muted">Escribe tu Correo</small>
+                      <br>
+                      <div id="error1" class="alert alert-danger" role="alert" >
+                        el email esta vacio
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="EscribirContraseña">Password</label>
+                      <input type="password" class="form-control" id="EscribirContraseña">
+                      <small id="passwordHelpBlock" class="form-text text-muted">
+                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                      </small>
+                      <br>
+                      <div id="error2" class="alert alert-danger" role="alert" >
+                        la contraseña tiene un largo muy pequeño
+                      </div>
+                      <div id="error3" class="alert alert-danger" role="alert" >
+                        la contraseña esta en blanco
+                      </div>
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2" >Loguear</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</section>  
+
+<footer class="bg-dark text-white ">
+  <div class="container-fluid ">
+    <nav class="row">
+      <a href="{% url 'index'%}" class="col-3 text-reset text-uppercase d-flex align-items-center ">
+        <img src="{% static 'sistemaWeb/img/logo.png' %}" alt="Logo GroupZero" class="img-logo mr-2">
+      </a>
+      <ul class="col-3 list-unstyled">
+        <li class="font-weight-bold text-uppercase">Problemas</li>
+        <li><a href="{% url 'CondicionesServicio'%}" class="text-reset">Condiciones de Servicio</a></li>
+      </ul>
+      <ul class="col-3 list-unstyled">
+        <li class="font-weight-bold text-uppercase">Conoce Sobre Nosotros</li>
+        <li><a href="#" class="text-reset">Nuestra Meta</a></li>
+      </ul>
+      <ul class="col-3 list-unstyled">
+        <li class="font-weight-bold text-uppercase">Redes Sociales</li>
+        <li>
+          <a href="https://web.facebook.com/?_rdc=1&_rdr" class="text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" class="text-reset" >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitch.tv/directory/following" class="text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="col-12 text-center h6">© All right Reversed.</p> 
+    </nav> 
+      </div>
+</footer>
+
+<script>
+  $(document).ready(
+    function(){
+
+
+     
+    $("#error1").hide();
+    $("#EscribirEmail").blur(
+        function(){
+          var mensaje="";
+          if($("#EscribirEmail").val().trim().length==0){
+            mensaje= "El nombre esta en blanco";
+          }
+          if(mensaje!=""){
+            $("#error1").html(mensaje);
+            $("#error1").show();
+          }else{
+            $("#error1").hide();
+          }
+           
+        }
+    )
+    $("#error2").hide();    
+    $("#EscribirContraseña").blur(
+        function(){
+          var mensaje="";
+          if($("#EscribirContraseña").val().trim().length==0){
+            mensaje= "La passowrd esta en blanco";
+          }
+          if(mensaje!=""){
+            $("#error2").html(mensaje);
+            $("#error2").show();
+          }else{
+            $("#error2").hide();
+          }
+           
+        }
+    )
+
+    $("#error3").hide();    
+    $("#EscribirContraseña").blur(
+        function(){
+          var mensaje="";
+          if($("#EscribirContraseña").val().trim().length<=8){
+            mensaje= "La password es demasiado pequeña";
+          }
+          if(mensaje!=""){
+            $("#error3").html(mensaje);
+            $("#error3").show();
+          }else{
+            $("#error3").hide();
+          }
+           
+        }
+      
+    )
+    
+    $("#error8").hide();    
+    $("#AceptarTerminos").blur(
+        function(){
+          var mensaje="";
+          if(Parseint($("#AceptarTerminos").val())==0){
+            mensaje= "Debe aceptar los terminos de servicio";
+          }
+          if(mensaje!=""){
+            $("#error8").html(mensaje);
+            $("#error8").show();
+          }else{
+            $("#error8").hide();
+          }
+           
+        }
+      
+    )
+       
+    $("#Form1").submit(
+        function(){
+          if ($("#EscribirContraseña").val().trim().length>=8) {
+            alert("Se ha enviado el formulario")
+          }else{
+            event.preventDefault()
+            alert("Contraseñas diferentes")
+          }
+           
+        }
+      
+    )
+    
+
+
+
+});
+
+</script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="{% static 'sistemaWeb/js/jquery-3.6.0.js' %}"></script>
+    <script src="{% static 'sistemaWeb/js/popper.js' %}"></script>
+    <script src="{% static 'sistemaWeb/js/bootstrap.js' %}"></script>
+  
+    
+</body>
+</html>
