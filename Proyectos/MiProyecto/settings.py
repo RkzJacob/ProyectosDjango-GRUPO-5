@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     #librerias de terceros
     'bootstrap4',
     'crispy_forms',
+    'rest_framework',
     #librerias django
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #MIS APPS
     'sistemaWeb',
+    'restV', #django-admin startapp rest
 
 ]
 
