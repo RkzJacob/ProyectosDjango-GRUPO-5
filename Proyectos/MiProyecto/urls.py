@@ -18,6 +18,7 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('sistemaWeb.urls'))
+    path('',include('sistemaWeb.urls')),
+    path('api/',include('restV.urls')),
 
 ]
