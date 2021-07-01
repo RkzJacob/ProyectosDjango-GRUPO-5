@@ -5,4 +5,4 @@ from sistemaWeb.models import PublicacionArte
 class PublicacionSerializer(serializers.ModelSerializer):
     class Meta:
         model = PublicacionArte
-        fields=['Nombre','apellido','correo','nombreObra','descObra','categoria']
+        fields=['Nombre','apellido','correo','nombreObra','descObra','imagenPublicacion','categoria']
