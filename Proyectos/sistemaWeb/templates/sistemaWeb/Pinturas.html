@@ -95,9 +95,11 @@
         <div class="w-100"></div>
         {% for PublicacionArte in PubliArte %}
         
+        
           <div class="col-4 mt-4" >
               <div class="card  border border-secondary" style="width: 18rem;">
-                  <a href=""><img src="{{PublicacionArte.imagenPublicacion.url}}" class="card-img-top" alt="..."></a>
+                  <a href=""><img src="{{if PublicacionArte.imagenPublicacion.url = null :
+                    PublicacionArte.imagenPublicacion.url =/media/fotopublicaciones/sticker-png-knife-blood-thepix-knife-cartoon-weapon.png}}" class="card-img-top" alt="..."></a>
                   <div class="card-body">
                     <h6 class="card-title">Nombre Obra: {{ PublicacionArte.nombreObra }}</h6>
                     <h6 class="card-subtitle">Categoria: {{ PublicacionArte.categoria }}</h6>

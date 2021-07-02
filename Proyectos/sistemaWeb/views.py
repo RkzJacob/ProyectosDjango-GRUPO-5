@@ -29,11 +29,14 @@ def login(request):
     return render(request,'sistemaWeb/login.html')
 
 def pinturas(request):
+
     PubliArte =PublicacionArte.objects.all()
     #cargo los datos de publicaciones de artes con todos sus datos en los artistas 
     datos ={
         'PubliArte' : PubliArte
     }
+    
+
     return render(request,'sistemaWeb/Pinturas.html',datos)
 
 def artistas(request):

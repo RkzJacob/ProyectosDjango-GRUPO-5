@@ -22,7 +22,7 @@ class PublicacionArte(models.Model):
     correo= models.CharField(max_length=40,null=True,blank=True,verbose_name="correo")
     nombreObra=models.CharField(max_length=20,null=True,blank=True,verbose_name="NombreObra")
     descObra=models.TextField(max_length=400,null=True,blank=True,verbose_name="DescObra")
-    imagenPublicacion=models.ImageField(upload_to="fotopublicaciones",null=True,verbose_name="imagen")
+    imagenPublicacion=models.ImageField(upload_to="fotopublicaciones",null=True,blank=True,verbose_name="imagen")
     categoria = models.ForeignKey(Categoria,on_delete=models.CASCADE)
 
     def __str__(self) :

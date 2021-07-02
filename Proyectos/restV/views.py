@@ -23,6 +23,30 @@ def procesar_publicacion(request):
             return Response(serializer.data,status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET','PUT','DELETE'])
+def detalle_pintura(request,id):
+    try:
+        pintura= PublicacionArte.objects.get(Nombre=id)
+    except PublicacionArte.DoesNotExist:
+        return Response(status=status.HTTP_400_NOT_FOUND)
+    if request.method == 'GET':
+        serializer= PublicacionSerializer(pintura)
+        return Response(serializer.data)
+    
+    if request.method== 'PUT':
+        data= JSONParser().parse(request)
+        serializer = PublicacionSerializer(pintura,data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return response(serializer.data)
+
+    if request.method == 'DELETE':
+        pintura.delete()
+        return Response(status.HTTP_204_NO_CONTENT)
+    
+
+
     
 
 
