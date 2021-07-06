@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 
+import rest_framework
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -35,6 +37,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'crispy_forms',
     'rest_framework',
+    'rest_framework.authtoken',
     #librerias django
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,7 +49,14 @@ INSTALLED_APPS = [
     'sistemaWeb',
     'restV', #django-admin startapp rest
 
+
 ]
+
+REST_FRAMEWORK={
+        'DEFAULT_AUTHENTICATION_CLASSES': [
+            'rest_framework.authentication.TokenAuthentication'
+        ]
+}
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
